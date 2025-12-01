@@ -1,57 +1,69 @@
-body{
-  margin:0;
-  background:#1c1032;
-  color:white;
-  font-family:Arial;
+body {
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #0c0032, #240090, #5a00d4);
+  font-family: Poppins, sans-serif;
+  color: white;
 }
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-h1{text-align:center;margin-bottom:20px;}
-
-.team-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-bottom:25px;
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffb300, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.team-buttons button{
-  background:white;
-  color:#1c1032;
-  border:none;
-  padding:8px 14px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:bold;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  box-shadow:0 0 6px rgba(0,0,0,0.3);
+.filter {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
 }
 
-.team-buttons button:hover{
-  background:#ffde59;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.team-buttons img{
-  height:28px;
-  width:28px;
+thead tr {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
 }
 
-table{
-  width:100%;
-  border-collapse:collapse;
-  background:rgba(255,255,255,0.05);
-  border-radius:10px;
-  overflow:hidden;
+thead th {
+  padding: 12px;
+  font-size: 16px;
 }
 
-th,td{padding:10px;}
-th{background:rgba(255,255,255,0.08);}
-tr:nth-child(even){background:rgba(255,255,255,0.04);}
+tbody tr {
+  background: rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.02);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 15px;
+}
