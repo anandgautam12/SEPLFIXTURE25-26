@@ -1,321 +1,50 @@
-/* -------------------------------
-   SEPL FIXTURE • RED-GOLD IPL THEME
-   Warm Crimson + Gold Glow
--------------------------------- */
-
-:root{
-  --bg:#0a0608;         /* deep near-black */
-  --bg2:#2b0b0f;        /* dark crimson shade */
-  --text:#fff7ec;       /* warm off-white */
-  --muted:#f2d8b8;      /* soft gold */
-  --accent:#ffbb00;     /* rich gold */
-  --accent2:#ff4d3a;    /* vibrant red/orange */
-  --card:rgba(255,245,230,0.04);
-  --glass:rgba(255,255,255,0.04);
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
 }
 
-/* Reset */
-*{ box-sizing:border-box }
-body{
-  margin:0;
-  font-family: Inter, Arial, sans-serif;
-  color:var(--text);
-
-  /* stadium dusk gradient */
-  background:linear-gradient(180deg,
-    #070405 0%,
-    #2b0b0f 45%,
-    #140506 100%
-  );
-
-  -webkit-font-smoothing:antialiased;
+.main-heading {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffcc00;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
 }
 
-/* Container */
-.container{
-  max-width:950px;
-  margin:auto;
-  padding:16px;
+.main-heading span {
+    display: block;
+    font-size: 26px;
+    color: #ffffff;
+    margin-top: 10px;
 }
 
-/* Title */
-h1{
-  text-align:center;
-  font-size:24px;
-  margin:10px 0 18px;
-  color:#fff2e6;
-  letter-spacing:1px;
-
-  /* warm gold glow */
-  text-shadow:0 0 12px rgba(255,187,0,0.22), 0 2px 20px rgba(255,77,58,0.06);
+.matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
-/* -------------------------------
-   TEAM LOGO BUTTON ROW
---------------------------------*/
-
-.team-buttons{
-  display:flex;
-  gap:12px;
-  padding:10px 4px;
-  overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  margin-bottom:18px;
-}
-.team-buttons::-webkit-scrollbar{ display:none }
-
-/* Button Shape */
-.team-buttons button{
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  border:none;
-  padding:0;
-
-  /* gold glass */
-  background:linear-gradient(145deg, rgba(255,235,200,0.10), rgba(255,255,255,0.02));
-  backdrop-filter: blur(6px);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition:transform .18s ease, box-shadow .18s ease;
-
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.45),
-    0 0 18px rgba(255,187,0,0.12);
+.match {
+    padding: 18px 14px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.45);
 }
 
-/* Hover animation */
-.team-buttons button:hover{
-  transform:scale(1.16);
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.5),
-    0 0 40px rgba(255,187,0,0.45),
-    0 0 12px rgba(255,77,58,0.18);
+/* Responsive */
+@media (max-width: 900px) {
+    .matches {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-
-/* Logos */
-.team-buttons img{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  object-fit:cover;
-  background:white;
-  padding:5px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.35);
-}
-
-/* -------------------------------
-   FIXTURE TABLE
---------------------------------*/
-
-.table-wrap{
-  overflow:auto;
-  border-radius:12px;
-  background:linear-gradient(180deg, rgba(255,245,230,0.02), rgba(0,0,0,0.02));
-  box-shadow:0 10px 30px rgba(0,0,0,0.45);
-  backdrop-filter:blur(4px);
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:10px;
-  min-width:680px;
-}
-
-thead th{
-  background:linear-gradient(90deg, rgba(255,187,0,0.18), rgba(255,77,58,0.10));
-  padding:12px;
-  text-align:left;
-  font-weight:800;
-  color:#fff2d9;
-  letter-spacing:0.5px;
-}
-
-tbody td{
-  padding:12px;
-  border-bottom:1px solid rgba(255,245,220,0.04);
-  color:var(--text);
-}
-
-/* even row warm tone */
-tbody tr:nth-child(even) td{
-  background:rgba(255,245,230,0.02);
-}
-
-/* Match highlight (gold bar) */
-.highlight{
-  background:linear-gradient(90deg, rgba(255,187,0,0.12), rgba(255,77,58,0.06));
-  border-left:4px solid var(--accent);
-  box-shadow: inset 0 0 12px rgba(255,187,0,0.03);
-}
-
-/* Team name pill */
-.team-pill{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:6px 10px;
-  border-radius:999px;
-  background:linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,187,0,0.03));
-  box-shadow:0 4px 12px rgba(0,0,0,0.35);
-  font-weight:700;
-  color:var(--text);
-}
-
-/* date/time small */
-.muted{
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* -------------------------------
-   MOBILE VIEW (Card Mode)
---------------------------------*/
-
-@media (max-width:780px){
-
-  table{ min-width:100% }
-  thead{ display:none }
-
-  tbody tr{
-    display:block;
-    background:linear-gradient(180deg, rgba(255,245,230,0.03), rgba(255,235,200,0.01));
-    padding:12px;
-    margin-bottom:14px;
-    border-radius:12px;
-    box-shadow:0 6px 22px rgba(0,0,0,0.45);
-    backdrop-filter:blur(4px);
-  }
-
-  tbody td{
-    display:flex;
-    justify-content:space-between;
-    padding:8px 6px;
-    border-bottom:0;
-  }
-
-  tbody td::before{
-    content:attr(data-label);
-    color:var(--muted);
-    font-weight:700;
-    margin-right:10px;
-    min-width:90px;
-  }
-
-  .team-buttons button{
-    width:55px;
-    height:55px;
-  }
-  .team-buttons img{
-    width:42px;
-    height:42px;
-    padding:4px;
-  }
-}
-
-/* Extra Small Devices */
-@media (max-width:360px){
-  .container{ padding:10px }
-  h1{ font-size:20px }
-  .team-buttons button{
-    width:48px;
-    height:48px;
-  }
-  .team-buttons img{
-    width:36px;
-    height:36px;
-  }
-}
-
-/* ============================================================
-      🎨 6 TEAM COLOR THEMES (MERGED INTO RED-GOLD BASE)
-   ============================================================ */
-
-/* NOTE:
-   Use by setting <body class="theme-..."> OR via JS:
-   function setTheme(name){ document.body.className = name; }
-*/
-
-/* ------------ TEAM 1: SATPUDA SUPER KINGS (Yellow–Blue) ------------ */
-.theme-sks{
-  --bg:#1a1600;
-  --bg2:#302800;
-  --text:#fff7d1;
-  --muted:#ffeab0;
-  --accent:#ffd700;       /* gold */
-  --accent2:#004cff;      /* bright blue */
-  --card:rgba(255,250,210,0.04);
-  --glass:rgba(255,250,210,0.06);
-}
-
-/* ------------ TEAM 2: SATPUDA ROYALS (Pink–Blue) ------------ */
-.theme-royals{
-  --bg:#1a0410;
-  --bg2:#30071b;
-  --text:#ffe6f4;
-  --muted:#ffbde3;
-  --accent:#ff4fb5;       /* pink */
-  --accent2:#0041ff;      /* deep blue */
-  --card:rgba(255,230,245,0.04);
-  --glass:rgba(255,230,245,0.05);
-}
-
-/* ------------ TEAM 3: SATPUDA PANTHERS (Purple–Gold) ------------ */
-.theme-panthers{
-  --bg:#11051d;
-  --bg2:#240a40;
-  --text:#f6e8ff;
-  --muted:#e8d2ff;
-  --accent:#b37bff;       /* purple glow */
-  --accent2:#ffcd44;      /* gold */
-  --card:rgba(245,235,255,0.04);
-  --glass:rgba(245,235,255,0.05);
-}
-
-/* ------------ TEAM 4: SATPUDA BLASTERS (Blue–Cyan) ------------ */
-.theme-blasters{
-  --bg:#021017;
-  --bg2:#062a39;
-  --text:#e9fbff;
-  --muted:#c8f7ff;
-  --accent:#00d8ff;       /* cyan */
-  --accent2:#003a8f;      /* deep navy */
-  --card:rgba(220,250,255,0.04);
-  --glass:rgba(220,250,255,0.05);
-}
-
-/* ------------ TEAM 5: SATPUDA WARRIORS (Red–Black–Gold) ------------ */
-.theme-warriors{
-  --bg:#0d0000;         /* deep warrior black */
-  --bg2:#260000;        /* dark red shade */
-  --text:#ffe7d6;       /* warm gold-cream */
-  --muted:#ffccaa;      /* soft gold */
-  --accent:#ff0000;     /* red power */
-  --accent2:#ffb400;    /* warrior gold */
-  --card:rgba(255,220,200,0.05);
-  --glass:rgba(255,220,200,0.06);
-}
-
-/* ------------ TEAM 6: SATPUDA STRIKERS (Orange–Red) ------------ */
-.theme-strikers{
-  --bg:#1c0800;
-  --bg2:#3a1200;
-  --text:#ffe9d6;
-  --muted:#ffd5b8;
-  --accent:#ff6a00;       /* orange fire */
-  --accent2:#ff1900;      /* striker red */
-  --card:rgba(255,230,215,0.05);
-  --glass:rgba(255,230,215,0.06);
-}
-
-/* Optional: subtle transitions when switching themes */
-body[class*="theme-"]{
-  transition: background .35s ease, color .25s ease;
-}
-.table-wrap, .team-buttons button, tbody tr{
-  transition: box-shadow .25s ease, background .25s ease, transform .18s ease;
+@media (max-width: 500px) {
+    .matches {
+        grid-template-columns: 1fr;
+    }
 }
