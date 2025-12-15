@@ -42,14 +42,14 @@ body {
 
 /* Team Name */
 .team {
-    font-size: 52px;     /* 🔥 TEAM FONT SIZE */
+    font-size: 62px;     /* 🔥 TEAM FONT SIZE */
     font-weight: 900;
     letter-spacing: 2.5px;
 }
 
 /* VS */
 .vs {
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 800;
     margin: 10px 0;
     color: #ffd700;
@@ -77,7 +77,8 @@ body {
         font-size: 48px;
     }
     .team {
-        font-size: 26px;
+        font-size: 46px;
     }
 }
+
 
