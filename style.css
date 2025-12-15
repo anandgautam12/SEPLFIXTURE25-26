@@ -35,14 +35,14 @@ body {
 
 /* 🔥 TEAM NAME BIG */
 .team {
-    font-size: 36px;       /* 👈 TEAM NAME SIZE */
-    font-weight: 800;
-    line-height: 1.3;
+    font-size: 52px;       /* 👈 TEAM NAME SIZE */
+    font-weight: 900;
+    line-height: 2;
 }
 
 /* 🔥 VS BIG */
 .vs {
-    font-size: 28px;       /* 👈 VS SIZE */
+    font-size: 38px;       /* 👈 VS SIZE */
     font-weight: 900;
     margin: 6px 0;
 }
@@ -61,4 +61,5 @@ body {
         font-size: 34px;
     }
 }
+
 
